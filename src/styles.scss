@@ -1,0 +1,30 @@
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: #0f172a; background: #f1f5f9; }
+h2 { margin: 0 0 1rem; }
+a { color: #2563eb; }
+.card { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem; margin-bottom: 1rem; }
+.auth { max-width: 380px; margin: 4rem auto; display: flex; flex-direction: column; gap: .75rem; }
+label { display: flex; flex-direction: column; gap: .25rem; font-size: .85rem; color: #475569; }
+input, select { padding: .5rem .6rem; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; }
+input.ng-invalid.ng-touched { border-color: #dc2626; }
+.row { display: flex; gap: .75rem; align-items: flex-end; flex-wrap: wrap; }
+.between { justify-content: space-between; align-items: center; margin-bottom: .5rem; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; }
+.stat span { display: block; color: #64748b; font-size: .8rem; }
+.stat strong { font-size: 1.4rem; }
+.btn { background: #2563eb; color: #fff; border: 0; padding: .55rem 1rem; border-radius: 6px; cursor: pointer; font: inherit; }
+.btn:disabled { opacity: .5; cursor: not-allowed; }
+.btn.secondary { background: #e2e8f0; color: #0f172a; }
+.btn.danger { background: #dc2626; }
+.btn.small { padding: .25rem .6rem; font-size: .8rem; }
+table { width: 100%; border-collapse: collapse; }
+th, td { text-align: left; padding: .5rem; border-bottom: 1px solid #e2e8f0; font-size: .9rem; }
+.actions { display: flex; gap: .4rem; }
+.mono { font-family: ui-monospace, monospace; }
+.badge { background: #e2e8f0; border-radius: 999px; padding: .1rem .6rem; font-size: .75rem; }
+.badge.available, .badge.completed { background: #dcfce7; color: #166534; }
+.badge.in_use, .badge.active { background: #fef9c3; color: #854d0e; }
+.badge.retired { background: #fee2e2; color: #991b1b; }
+.muted { color: #64748b; }
+.error { color: #dc2626; margin: .25rem 0; }
+.ok { color: #166534; }
