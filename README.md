@@ -15,10 +15,12 @@ The dev server proxies `/api/*` to the gateway at `http://localhost:8080` ([prox
 
 ```powershell
 docker build -t saas-platform-ui .
-docker run --name saas-platform-ui --rm -p 7001:80 saas-platform-ui
+docker run --name saas-platform-ui --rm -p 7001:80 -e SENTRY_DSN="<your-public-Sentry-DSN>" saas-platform-ui
 ```
 
 Open `http://localhost:7001`. The container proxies `/api/*` to `host.docker.internal:8080` by default; set `API_UPSTREAM` to override the gateway URL.
+
+Sentry reporting is disabled when `SENTRY_DSN` is unset. When configured, it captures JavaScript errors, sampled page/navigation traces, Core Web Vitals, and API request spans. The browser DSN is public; do not put secrets in it. For a local Lighthouse audit, run `npx lighthouse http://localhost:7001 --view`.
 
 ## Build
 
