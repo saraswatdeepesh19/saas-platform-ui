@@ -10,10 +10,10 @@ Backend context: the UI talks only to the API gateway (`:8080`) of the SaaS plat
 flowchart LR
     Browser[Angular SPA :4200] -- /api/* --> Proxy[Dev proxy]
     Proxy -- strips /api --> Gateway[API Gateway :8080]
-    Gateway --> Auth[/auth/*]
-    Gateway --> Device[/devices, /sessions/]
-    Gateway --> Usage[/usage/*]
-    Gateway --> Billing[/billing/*]
+    Gateway --> Auth["/auth/*"]
+    Gateway --> Device["/devices, /sessions/"]
+    Gateway --> Usage["/usage/*"]
+    Gateway --> Billing["/billing/*"]
 ```
 
 | Route | Page | Backend calls | Access |
